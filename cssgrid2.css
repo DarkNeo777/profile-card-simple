@@ -1,0 +1,78 @@
+
+/*windows + . = ❤*/
+
+/*as it is said makes a video into a background*/
+#background-video{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+
+.testimonial-grid {
+    display: grid;
+    gap: 1.5rem;
+
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+
+@media (min-width: 40em)/*for a responsive on small screens  */
+{
+    .testimonial-grid{
+     grid-template-columns: repeat(4,1fr); /*splits makes 4 rows equal length*/
+
+    }
+    .testimonial:last-child {
+        grid-column-start: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;/* or also span 2*/
+    }
+    .grid-span2 {
+        grid-column: span 2;
+    }
+}
+
+
+.testimonial {
+    font-size:  var(--fs,-400);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem;
+    background-color: violet;
+    opacity: .80;
+    border:  1px solid lightblue;
+
+}
+.testimonial:hover {
+    transform:translateY(0.5em);
+    opacity: 1;
+
+}
+.testimonial:nth-child(1) {
+    background-color: salmon;
+}
+.testimonial:nth-child(4) {
+    background-color: mediumspringgreen;
+}
+.testimonial:nth-child(2) {
+    background-color: lightblue;
+}
+.testimonial:nth-child(5) {
+    background-image: url(japan-lanternNight.jpg);
+    background-color: #ffffff; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    box-shadow: none;
+    border:  1px solid lightblue;
+}
